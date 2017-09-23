@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "nightmare": "^2.10.0"
   },
   "devDependencies": {
