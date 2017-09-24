@@ -1,8 +1,7 @@
+import Nightmare from 'nightmare';
 import { KANSHOU_METER_URL } from './constants';
 
 require('dotenv').config();
-
-const Nightmare = require('nightmare');
 
 export default function getCookies() {
   const nightmare = Nightmare({ show: true });
