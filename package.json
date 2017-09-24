@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "importData": "babel-node ./src/fetchMoviesData.js",
-    "importData:debug": "DEBUG=nightmare babel-node ./src/fetchMoviesData.js"
+    "importData": "babel-node ./src/importData.js",
+    "importData:debug": "DEBUG=nightmare babel-node ./src/importData.js"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
