@@ -1,8 +1,12 @@
 import fetchCookies from './KanshouMeter/fetchCookies';
+import fetchMoviesUrl from './KanshouMeter/fetchMoviesUrl';
 
 async function exec() {
   const cookies = await fetchCookies();
-  console.log(cookies);
+  const Urls = await fetchMoviesUrl(cookies);
+  console.log(Urls);
 }
 
-exec();
+exec().then(() => {
+  console.log('Fetching Movies Data completed.');
+});
