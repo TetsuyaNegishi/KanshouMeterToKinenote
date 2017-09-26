@@ -6,14 +6,15 @@ async function fetchMoviesDataList(cookies, moviesUrls) {
   const nightmare = Nightmare({ show: false });
   await setCookiesForNightmare(cookies, nightmare);
 
-  const datas = [];
+  const data = [];
   /* eslint-disable no-restricted-syntax */
   for (const url of moviesUrls) {
     /* eslint-disable no-await-in-loop */
-    const data = await getMoviesData(url, nightmare);
-    datas.push(data);
+    const movieData = await getMoviesData(url, nightmare);
+    data.push(movieData);
   }
   nightmare.end();
+  return data;
 }
 
 export default fetchMoviesDataList;
