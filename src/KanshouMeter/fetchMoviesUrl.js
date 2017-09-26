@@ -24,13 +24,15 @@ async function fetchMoviesUrl(cookies) {
   await setCookiesForNightmare(cookies, nightmare);
   const myPageURL = await getMyPageUrl(cookies, nightmare);
 
-  let urlList = [];
+  const urlList = new Set();
   let page = 1;
   let newUrlList;
   /* eslint-disable no-await-in-loop */
   do {
     newUrlList = await getUrlListfromVideoList(`${myPageURL}/videolist&p=${page}`, nightmare);
-    urlList = [...urlList, ...newUrlList];
+    newUrlList.forEach((url) => {
+      urlList.add(url);
+    });
     page += 1;
   } while (newUrlList.length !== 0);
   return urlList;
