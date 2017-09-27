@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "importData": "babel-node ./src/importData.js",
-    "importData:debug": "DEBUG=nightmare babel-node ./src/importData.js"
+    "importData:debug": "DEBUG=nightmare babel-node ./src/importData.js",
+    "exportData": "babel-node ./src/exportData.js"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
